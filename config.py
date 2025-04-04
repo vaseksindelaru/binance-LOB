@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from typing import Dict, Any, List
 import os
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 def json_config_settings_source(settings: BaseSettings) -> Dict[str, Any]:
