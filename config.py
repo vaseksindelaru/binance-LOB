@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 import os
 from pydantic_settings import BaseSettings
 
@@ -29,6 +29,10 @@ class Config(BaseSettings):
     db_name: str = "archive"
     host_name_docker: str = "clickhouse"
     host_name_default: str = "localhost"
+    sql_host: str = 'localhost'
+    sql_user: str = 'root'
+    sql_password: str = '21blackjack'
+    sql_database: str = 'binance_lob'
 
     @property
     def host_name(self) -> str:
